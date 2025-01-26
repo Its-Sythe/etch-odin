@@ -62,4 +62,16 @@ main {
     font-family: Courier;
 }
 
+.grid-space {
+    display: flex;
+    flex-wrap: wrap;
+    flex: auto;
+    justify-content:baseline;
+    align-items: center;
+}
 
+#grid-div {
+    width: 44px;
+    height: 44px;
+    border: 1px solid black;
+}
