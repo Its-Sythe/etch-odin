@@ -32,4 +32,4 @@ function hoverGrid() {
 
 
 createGrid(16);
-colorGrid()
+hoverGrid()
