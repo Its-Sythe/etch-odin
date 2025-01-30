@@ -1,3 +1,5 @@
+const arrayOfColors = []
+
 function createGrid(size) {
     let space = document.querySelector(".grid-space");
     if (size <= 100) {
@@ -7,7 +9,7 @@ function createGrid(size) {
             
             for (let j = 0; j < size; j++){
                 let row = document.createElement("div");
-                row.id = "row";
+                row.className = "row";
                 row.style.border = "2px solid black";
                 column.appendChild(row);
             }
@@ -19,6 +21,15 @@ function createGrid(size) {
     }
 }
 
+function colorGrid() {
+    document.querySelectorAll(".row").forEach((row) => {
+        row.addEventListener("mouseover", () => {
+            row.style = "background-color: red;"
+        })
+    })
+}
+
+
+
 createGrid(16);
-
-
+colorGrid()
