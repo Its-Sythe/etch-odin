@@ -21,7 +21,7 @@ function createGrid(size) {
     }
 }
 
-function colorGrid() {
+function hoverGrid() {
     document.querySelectorAll(".row").forEach((row) => {
         row.addEventListener("mouseover", () => {
             row.style = "background-color: red;"
