@@ -1,5 +1,7 @@
 const arrayOfColors = []
 
+let numberOfDivs = 16;
+
 function createGrid(size) {
     let space = document.querySelector(".grid-space");
     if (size <= 100) {
@@ -24,12 +26,17 @@ function createGrid(size) {
 function hoverGrid() {
     document.querySelectorAll(".row").forEach((row) => {
         row.addEventListener("mouseover", () => {
-            row.style = "background-color: red;"
-        })
+            row.style = "background-color: black;"
+        });
     })
 }
 
+function resetGrid() {
+    document.getElementById("reset-btn").addEventListener("click", () => {
+        // to be done!
+    })
+}
 
-
-createGrid(16);
-hoverGrid()
+createGrid(numberOfDivs);
+hoverGrid();
+resetGrid();
