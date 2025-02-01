@@ -1,6 +1,11 @@
 const arrayOfColors = []
 
-let numberOfDivs = 16;
+function getSize() {
+    let btn = document.getElementById("size-submit");
+    btn.addEventListener("click", () => {
+        createGrid(document.getElementById("size").value);
+    })
+}
 
 function createGrid(size) {
     let space = document.querySelector(".grid-space");
@@ -33,10 +38,7 @@ function hoverGrid() {
 
 function resetGrid() {
     document.getElementById("reset-btn").addEventListener("click", () => {
-        // to be done!
+        location.reload();
     })
 }
 
-createGrid(numberOfDivs);
-hoverGrid();
-resetGrid();
